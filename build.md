@@ -1,41 +1,21 @@
-CLI: revanced-cli-2.14.1-all.jar  
-Integrations: app-release-unsigned-v0.53.0.apk  
-Patches: revanced-patches-2.85.1.jar  
+CLI: revanced-cli-2.15.0-all.jar  
+Integrations: app-release-unsigned-v0.55.0.apk  
+Patches: revanced-patches-2.85.2.jar  
 
-YouTube
-==
-- Add  switch (Contributed by @OxrxL)
-- Add  patch
-- Add  patch
-- Add  patch (excluded by default, support )
-- Ad filter update (needs more testing)
-- Splash Icon support for default icons (ReVanced Red)
--  settings moved from Experimental Flags to Extended settings
--  settings moved from Extended settings to Layout settings
-- fix:  patch is missing when trying to build from rvx-builder
-- fix: App crashes when trying to build in a specific version
-- fix: default video quality settings sometimes not working
-- fix: swipe gestures stutter
-- Crowdin Translation Update
-, , , , , , , 
+#### [2.85.2](https://github.com/revanced/revanced-patches/compare/v2.85.1...v2.85.2) (2022-10-22)
+### Bug Fixes
+* **youtube/integrations:** set context for remaining activities ([#828](https://github.com/revanced/revanced-patches/issues/828)) ([b2b6a3d](https://github.com/revanced/revanced-patches/commit/b2b6a3d1492bc2d5a6e27c68c74e3904764dda4b))
 
-YouTube Music
-==
-- Add  patch (excluded by default, support )
-
-ETC
-==
-- bump revanced-patches-2.85.1
-fix(youtube/theme): extend dark mode theming
-feat(youtube): hide-mix-playlists patch
-fix(youtube/video-ads): revert faulty method patch
-
-
-※ I don't know why, but the Crowdin translation site is dead again 🤷
-※ If you want to contribute to the translation, please upload the strings.xml file on Crowdin or use the PR on github.
   
-YouTube: 17.40.41  
+YouTube: 17.36.37  
+YouTube: 17.36.37  
+Music (arm64-v8a): 5.29.52  
 Music (arm64-v8a): 5.29.52  
 Music (arm-v7a): 5.29.52  
+Music (arm-v7a): 5.29.52  
+Twitter: 9.64.0-release.0  
+Reddit: 2022.39.1  
+TikTok: 26.6.4  
+Spotify: 8.7.76.359  
 
-[revanced-extended-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
+[revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)  
