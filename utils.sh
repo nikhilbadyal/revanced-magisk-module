@@ -9,7 +9,7 @@ BUILD_DIR="build"
 
 ARM64_V8A="arm64-v8a"
 ARM_V7A="arm-v7a"
-GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-$"j-hc/revanced-magisk-module"}
+GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-$"nikhilbadyal/revanced-magisk-module"}
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
 WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 
@@ -25,17 +25,17 @@ json_get() {
 
 get_prebuilts() {
 	echo "Getting prebuilts"
-	RV_CLI_URL=$(req https://api.github.com/repos/j-hc/revanced-cli/releases/latest - | json_get 'browser_download_url')
+	RV_CLI_URL=$(req https://api.github.com/repos/inotia00/revanced-cli/releases/latest - | json_get 'browser_download_url')
 	RV_CLI_JAR="${TEMP_DIR}/${RV_CLI_URL##*/}"
 	log "CLI: ${RV_CLI_URL##*/}"
 
-	RV_INTEGRATIONS_URL=$(req https://api.github.com/repos/revanced/revanced-integrations/releases/latest - | json_get 'browser_download_url')
+	RV_INTEGRATIONS_URL=$(req https://api.github.com/repos/inotia00/revanced-integrations/releases/latest - | json_get 'browser_download_url')
 	RV_INTEGRATIONS_APK=${RV_INTEGRATIONS_URL##*/}
 	RV_INTEGRATIONS_APK="${RV_INTEGRATIONS_APK%.apk}-$(cut -d/ -f8 <<<"$RV_INTEGRATIONS_URL").apk"
 	log "Integrations: $RV_INTEGRATIONS_APK"
 	RV_INTEGRATIONS_APK="${TEMP_DIR}/${RV_INTEGRATIONS_APK}"
 
-	RV_PATCHES=$(req https://api.github.com/repos/revanced/revanced-patches/releases/latest -)
+	RV_PATCHES=$(req https://api.github.com/repos/inotia00/revanced-patches/releases/latest -)
 	RV_PATCHES_CHANGELOG=$(echo "$RV_PATCHES" | json_get 'body' | sed 's/\(\\n\)\+/\\n/g')
 	RV_PATCHES_URL=$(echo "$RV_PATCHES" | json_get 'browser_download_url' 'jar')
 	RV_PATCHES_JAR="${TEMP_DIR}/${RV_PATCHES_URL##*/}"
@@ -208,11 +208,11 @@ build_rv() {
 		fi
 
 		local stock_apk="${TEMP_DIR}/${args[app_name],,}-stock-v${version}-${args[arch]}.apk"
-		local apk_output="${BUILD_DIR}/${args[app_name],,}-revanced-v${version}-${args[arch]}.apk"
+		local apk_output="${BUILD_DIR}/${args[app_name],,}-revanced-extended-v${version}-${args[arch]}.apk"
 		if [ "${args[microg_patch]:-}" ]; then
-			local patched_apk="${TEMP_DIR}/${args[app_name],,}-revanced-v${version}-${args[arch]}-${build_mode}.apk"
+			local patched_apk="${TEMP_DIR}/${args[app_name],,}-revanced-extended-v${version}-${args[arch]}-${build_mode}.apk"
 		else
-			local patched_apk="${TEMP_DIR}/${args[app_name],,}-revanced-v${version}-${args[arch]}.apk"
+			local patched_apk="${TEMP_DIR}/${args[app_name],,}-revanced-extended-v${version}-${args[arch]}.apk"
 		fi
 		if [ ! -f "$stock_apk" ]; then
 			if [ $dl_from = apkmirror ]; then
@@ -235,14 +235,12 @@ build_rv() {
 		fi
 
 		if [ "${args[arch]}" = "all" ]; then
-			log "${args[app_name]}: ${version}"
+			! grep -q "${args[app_name]}" build.md && log "${args[app_name]}: ${version}"
 		else
-			log "${args[app_name]} (${args[arch]}): ${version}"
+			! grep -q "${args[app_name]} (${args[arch]})" build.md && log "${args[app_name]} (${args[arch]}): ${version}"
 		fi
 
-		if [ ! -f "$patched_apk" ] || [ "${args[microg_patch]:-}" ]; then
-			patch_apk "$stock_apk" "$patched_apk" "$patcher_args"
-		fi
+		[ ! -f "$patched_apk" ] && patch_apk "$stock_apk" "$patched_apk" "$patcher_args"
 		if [ ! -f "$patched_apk" ]; then
 			echo "BUILD FAIL"
 			return
@@ -258,12 +256,12 @@ build_rv() {
 		postfsdata_sh "${args[pkg_name]}"
 		customize_sh "${args[pkg_name]}" "${version}"
 		module_prop "${args[module_prop_name]}" \
-			"${args[app_name]} ReVanced" \
+			"${args[app_name]} ReVanced Extended" \
 			"${version}" \
-			"${args[app_name]} ReVanced Magisk module" \
+			"${args[app_name]} ReVanced Extended Magisk module" \
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/update/${args[module_update_json]}"
 
-		local module_output="${args[app_name],,}-revanced-magisk-v${version}-${args[arch]}.zip"
+		local module_output="${args[app_name],,}-revanced-extended-magisk-v${version}-${args[arch]}.zip"
 		zip_module "$patched_apk" "$module_output" "$stock_apk" "${args[pkg_name]}"
 
 		echo "Built ${args[app_name]} (${args[arch]}) (root): '${BUILD_DIR}/${module_output}'"
@@ -339,12 +337,12 @@ build_reddit() {
 	declare -A reddit_args
 	reddit_args[app_name]="Reddit"
 	reddit_args[mode]="$REDDIT_MODE"
-	reddit_args[pkg_name]="om.reddit.frontpage"
+	reddit_args[pkg_name]="com.reddit.frontpage"
 	reddit_args[apkmirror_dlurl]="redditinc/reddit/reddit"
 	reddit_args[regexp]='APK</span>[^@]*@\([^#]*\)'
 	reddit_args[module_prop_name]="rditrv-magisk"
 	#shellcheck disable=SC2034
-	reddit_args[module_update_json]="rdit-update.json"
+	reddit_args[module_update_json]="rdrv-update.json"
 
 	build_rv reddit_args
 }
@@ -357,7 +355,7 @@ build_tiktok() {
 	tiktok_args[pkg_name]="com.zhiliaoapp.musically"
 	tiktok_args[apkmirror_dlurl]="tiktok-pte-ltd/tik-tok-including-musical-ly/tik-tok-including-musical-ly"
 	tiktok_args[regexp]='APK</span>[^@]*@\([^#]*\)'
-	tiktok_args[module_prop_name]="tt-magisk"
+	tiktok_args[module_prop_name]="ttrv-magisk"
 	#shellcheck disable=SC2034
 	tiktok_args[module_update_json]="tt-update.json"
 
@@ -369,7 +367,7 @@ build_spotify() {
 	spotify_args[app_name]="Spotify"
 	spotify_args[mode]="$SPOTIFY_MODE"
 	spotify_args[pkg_name]="com.spotify.music"
-	spotify_args[module_prop_name]="sp-magisk"
+	spotify_args[module_prop_name]="sprv-magisk"
 	#shellcheck disable=SC2034
 	spotify_args[module_update_json]="sp-update.json"
 
@@ -383,7 +381,7 @@ build_warn_wetter() {
 	warn_wetter_args[pkg_name]="de.dwd.warnapp"
 	warn_wetter_args[apkmirror_dlurl]="deutscher-wetterdienst/warnwetter/warnwetter"
 	warn_wetter_args[regexp]='APK</span>[^@]*@\([^#]*\)'
-	warn_wetter_args[module_prop_name]="ww-magisk"
+	warn_wetter_args[module_prop_name]="wwrv-magisk"
 	#shellcheck disable=SC2034
 	warn_wetter_args[module_update_json]="ww-update.json"
 
@@ -403,10 +401,8 @@ module_prop() {
 name=${2}
 version=v${3}
 versionCode=${NEXT_VER_CODE}
-author=j-hc
+author=nikhil
 description=${4}" >"${MODULE_TEMPLATE_DIR}/module.prop"
 
-	if [ "$ENABLE_MAGISK_UPDATE" = true ]; then
-		echo "updateJson=${5}" >>"${MODULE_TEMPLATE_DIR}/module.prop"
-	fi
+	[ "$ENABLE_MAGISK_UPDATE" = true ] && echo "updateJson=${5}" >>"${MODULE_TEMPLATE_DIR}/module.prop"
 }
