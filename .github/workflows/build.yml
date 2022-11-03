@@ -38,9 +38,9 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
 
           cd build
-          yt_op=$(find . -maxdepth 1 -name "youtube-revanced-magisk-*.zip" -printf '%P')
+          yt_op=$(find . -maxdepth 1 -name "youtube-revanced-extended-magisk-*.zip" -printf '%P')
           if [ -z "$yt_op" ]; then
-            echo "RELEASE_NAME=ReVanced" >> $GITHUB_OUTPUT
+            echo "RELEASE_NAME=ReVanced Extended" >> $GITHUB_OUTPUT
           else
             echo "RELEASE_NAME=$yt_op" >> $GITHUB_OUTPUT
           fi

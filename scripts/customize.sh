@@ -57,5 +57,5 @@ ui_print "* Optimizing __PKGNAME"
 cmd package compile --reset __PKGNAME &
 
 ui_print "* Done"
-ui_print "  by j-hc (github.com/j-hc)"
+ui_print "  by nikhil (github.com/nikhilbadyal)"
 ui_print " "

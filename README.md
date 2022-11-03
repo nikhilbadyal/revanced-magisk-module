@@ -1,8 +1,8 @@
 # ReVanced Magisk Module
-[![Build Modules](https://github.com/j-hc/revanced-magisk-module/actions/workflows/build.yml/badge.svg)](https://github.com/j-hc/revanced-magisk-module/actions/workflows/build.yml)
-[![CI](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml)
+[![Build Modules](https://github.com/nikhilbadyal/revanced-magisk-module/actions/workflows/build.yml/badge.svg)](https://github.com/nikhilbadyal/revanced-magisk-module/actions/workflows/build.yml)
+[![CI](https://github.com/nikhilbadyal/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/nikhilbadyal/revanced-magisk-module/actions/workflows/ci.yml)
 
-You can get the [latest CI release from here](https://github.com/j-hc/revanced-magisk-module/releases).
+You can get the [latest CI release from here](https://github.com/nikhilbadyal/revanced-magisk-module/releases).
 
 [**mindetach module**](https://github.com/j-hc/mindetach-magisk) in the releases section detaches YouTube and YouTube Music from Play Store and blocks it from updating them.
 
@@ -21,7 +21,7 @@ You can get the [latest CI release from here](https://github.com/j-hc/revanced-m
 #### **Note that the [CI workflow](../../actions/workflows/ci.yml) is scheduled to build the modules and APKs everyday if there is a change. You may want to disable it.**
 
 ## To include/exclude patches
-[**See the list of patches**](https://github.com/revanced/revanced-patches#-list-of-available-patches)
+[**See the list of patches**](https://github.com/inotia00/revanced-patches/tree/revanced-extended#-patches)
 
  * Star the repo :eyes:
  * [Fork the repo](https://github.com/j-hc/revanced-magisk-module/fork) or use it as a template
@@ -35,7 +35,7 @@ To be able to use non-root variants of YT and Music you will need to install [Va
 Make sure you have JDK 17 installed. Then run:
 
 ```console
-$ git clone --recurse-submodules https://github.com/j-hc/revanced-magisk-module
+$ git clone --recurse-submodules https://github.com/nikhilbadyal/revanced-magisk-module
 $ cd revanced-magisk-module
 $ ./build.sh build
 ```
