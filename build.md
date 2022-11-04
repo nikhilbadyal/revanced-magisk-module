@@ -1,33 +1,45 @@
 CLI: revanced-cli-2.14.1-all.jar  
-Integrations: app-release-unsigned-v0.55.0.apk  
-Patches: revanced-patches-2.85.2.jar  
+Integrations: app-release-unsigned-v0.63.0.apk  
+Patches: revanced-patches-2.99.0.jar  
 
 YouTube
 ==
-- Ad filter update (needs more testing)
-- Splash Icon support for ReVanced Blue
-- improve ReVanced Red Splash Icon
-- improve  patch
-- improve video-id-hook for ryd
-- fix:  patch fails when  patch is excluded
-- fix: 'hide comment spoiler' not working
-- fix: video speed and video quality reset when screen is off
-- fix: autorepeat not working when screen is off
-- fix: fullscreen swipe zoom does not work
+- Ad filter update
+- Add `hide-watch-in-vr` patch
+- Add `tablet-layout` patch (Experimental Flags)
+- Add `breaking news` setting
+- Add `view product` setting
+- Add `timed reactions` setting
+- Improve `hide-my-mix` patch
+- Fix: autorepeat doesn't work properly when autoplay is on
+- Fix: `inapp-browser` patch only works for video description links
+- Fix: `hide comment` switch not working properly
+- Change the copy icon for the `overlaybuttons-alternative` patch https://github.com/inotia00/revanced-patches/pull/35
+- Change some default settings values
+- Move button container settings and comment settings position
+- Code cleanup
 - Crowdin Translation Update
-, , , 
+`Arabic`, `Bengali`, `Chinese Simplified`, `Chinese Traditional`, `Indonesian`, `Korean`, `Russian`, `Thai`, `Turkish`, `Ukrainian`, `Vietnamese`
 
 ETC
 ==
-- Added Support YouTube v17.41.37
-- bump revanced-patches-2.85.2
-fix(youtube/integrations): set context for remaining activities (#828)
-(fix: app crashes when opening YouTube link from Google PlayStore or Google News Feed)
+- Added Support YouTube v17.42.35
+- Added Support YouTube Music v5.29.53, v5.30.51
+- Deprecated support for YouTube v17.36.39
+- Deprecated support for YouTube Music v5.23.50, v5.27.51, v5.29.52
+- Move `Compatibility` path
+- bump revanced-patches-2.99.0
+feat(youtube/sponsorblock): skip segments once automatically
+fix(youtube/theme): theme missing gray color
+feat(youtube/microg-support): handle availability of Vanced MicroG
+feat(youtube/comments): hide shorts comments button 
 
 ※ I don't know why, but the Crowdin translation site is dead again 🤷
 ※ If you want to contribute to the translation, please upload the strings.xml file on Crowdin or use the PR on github.
   
-Music (arm64-v8a): 5.29.52  
-Music (arm-v7a): 5.29.52  
+**App Versions:**  
+Music (arm64-v8a): 5.30.51  
+YouTube: 17.44.33  
+Music (arm-v7a): 5.30.51  
 
 [revanced-extended-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
