@@ -19,8 +19,7 @@ fix(youtube/theme): return correct color value
 ※ If you want to contribute to the translation, refer this [documentations](https://telegra.ph/How-to-contribute-to-Crowdin-translations-via-upload-of-stringsxml-file-11-10)
   
 **App Versions:**  
-YouTube: 17.44.34  
-Music (arm64-v8a): 5.32.50  
-Music (arm-v7a): 5.32.50  
+Music (arm64-v8a): 5.33.51  
+Music (arm-v7a): 5.33.51  
 
 [revanced-extended-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
