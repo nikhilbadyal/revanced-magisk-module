@@ -1,28 +1,17 @@
-CLI: revanced-cli-2.15.2-all.jar  
-Integrations: app-release-unsigned-v0.71.1.apk  
-Patches: revanced-patches-2.111.4.jar  
+CLI: revanced-cli-2.18.3-all.jar  
+Integrations: app-release-unsigned-v0.86.0.apk  
+Patches: revanced-patches-2.147.0.jar  
 
-YouTube
-==
-- Fix: hide chaptercard not working sometimes
-- Crowdin Translation Update
-`French`, `Polish`
+There have been so many changes, I can't remember them all
+Have fun finding out what has changed
 
-YouTube Music
-==
-- Crowdin Translation Update
-`Bengali`
+I'll add as I remember 🫠
 
-ETC
-==
-- Added Support YouTube v17.45.36
-
-※ **Patches are not compatible after `YouTube v17.46.xx`**! Be sure to use the recommended version.
-
-※ If you want to contribute to the translation, refer this [documentations](https://telegra.ph/How-to-contribute-to-Crowdin-translations-via-upload-of-stringsxml-file-11-10)
-※ Please refer to the [documentations](https://github.com/inotia00/revanced-documentation/wiki/Method-3.-Using-official-ReVanced-Manager-(Android)) for a guide to building ReVanced Extended using the official ReVanced Manager.
+※ Support `settings-framework` from this version
   
 **App Versions:**  
-YouTube: 17.45.36  
+YouTube: 17.49.37  
+Music (arm64-v8a): 5.36.51  
+Music (arm-v7a): 5.36.51  
 
 [revanced-extended-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
