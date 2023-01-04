@@ -6,8 +6,13 @@ MODULE_TEMPLATE_DIR="revanced-magisk"
 MODULE_SCRIPTS_DIR="scripts"
 TEMP_DIR="temp"
 BUILD_DIR="build"
-PKGS_LIST="temp/module-pkgs"
+PKGS_LIST="${TEMP_DIR}/module-pkgs"
 
+if [ "${GITHUB_TOKEN+x}" ]; then
+	GH_AUTH_HEADER="Authorization: token ${GITHUB_TOKEN}"
+else
+	GH_AUTH_HEADER=""
+fi
 GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-$"j-hc/revanced-magisk-module"}
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
 WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"
@@ -35,7 +40,6 @@ toml_get() {
 
 #shellcheck disable=SC2034
 read_main_config() {
-	MOUNT_DELAY=$(toml_get "main-config" mount-delay)
 	COMPRESSION_LEVEL=$(toml_get "main-config" compression-level)
 	ENABLE_MAGISK_UPDATE=$(toml_get "main-config" enable-magisk-update)
 	PARALLEL_JOBS=$(toml_get "main-config" parallel-jobs)
@@ -45,17 +49,17 @@ read_main_config() {
 
 get_prebuilts() {
 	echo "Getting prebuilts"
-	RV_CLI_URL=$(req https://api.github.com/repos/j-hc/revanced-cli/releases/latest - | json_get 'browser_download_url')
+	RV_CLI_URL=$(gh_req https://api.github.com/repos/j-hc/revanced-cli/releases/latest - | json_get 'browser_download_url')
 	RV_CLI_JAR="${TEMP_DIR}/${RV_CLI_URL##*/}"
 	log "CLI: ${RV_CLI_URL##*/}"
 
-	RV_INTEGRATIONS_URL=$(req https://api.github.com/repos/revanced/revanced-integrations/releases/latest - | json_get 'browser_download_url')
+	RV_INTEGRATIONS_URL=$(gh_req https://api.github.com/repos/revanced/revanced-integrations/releases/latest - | json_get 'browser_download_url')
 	RV_INTEGRATIONS_APK=${RV_INTEGRATIONS_URL##*/}
 	RV_INTEGRATIONS_APK="${RV_INTEGRATIONS_APK%.apk}-$(cut -d/ -f8 <<<"$RV_INTEGRATIONS_URL").apk"
 	log "Integrations: $RV_INTEGRATIONS_APK"
 	RV_INTEGRATIONS_APK="${TEMP_DIR}/${RV_INTEGRATIONS_APK}"
 
-	RV_PATCHES=$(req https://api.github.com/repos/revanced/revanced-patches/releases/latest -)
+	RV_PATCHES=$(gh_req https://api.github.com/repos/revanced/revanced-patches/releases/latest -)
 	RV_PATCHES_CHANGELOG=$(echo "$RV_PATCHES" | json_get 'body' | sed 's/\(\\n\)\+/\\n/g')
 	RV_PATCHES_URL=$(echo "$RV_PATCHES" | json_get 'browser_download_url' | grep 'jar')
 	RV_PATCHES_JAR="${TEMP_DIR}/${RV_PATCHES_URL##*/}"
@@ -88,6 +92,7 @@ set_prebuilts() {
 }
 
 req() { wget -nv -O "$2" --header="$WGET_HEADER" "$1"; }
+gh_req() { wget -nv -O "$2" --header="$GH_AUTH_HEADER" "$1"; }
 log() { echo -e "$1  " >>build.md; }
 get_largest_ver() {
 	local max=0
@@ -328,8 +333,7 @@ customize_sh() {
 	echo "${s//__PKGVER/$2}" >"${3}/customize.sh"
 }
 service_sh() {
-	local s="${SERVICE_SH//__MNTDLY/$MOUNT_DELAY}"
-	s="${s//__PKGNAME/$1}"
+	local s="${SERVICE_SH//__PKGNAME/$1}"
 	echo "${s//__PKGVER/$2}" >"${3}/service.sh"
 }
 module_prop() {
