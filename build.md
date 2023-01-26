@@ -28,11 +28,11 @@ ETC
 - [other countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube-Blue: 18.01.36  
-Music (arm-v7a): 5.39.52  
-YouTube-Red: 18.01.36  
-Music (arm64-v8a): 5.39.52  
-YouTube: 18.01.36  
-YouTube-Revancify: 18.01.36  
+YouTube-Blue: 18.02.37  
+YouTube: 18.02.37  
+YouTube-Revancify: 18.02.37  
+Music (arm64-v8a): 5.41.50  
+YouTube-Red: 18.02.37  
+Music (arm-v7a): 5.41.50  
 
-[revanced-extended-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
+[revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
