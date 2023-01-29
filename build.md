@@ -1,26 +1,24 @@
-CLI: revanced-cli-2.20.1-all.jar  
+CLI: revanced-cli-2.20.2-all.jar  
 Integrations: app-release-unsigned.apk  
-Patches: revanced-patches-2.153.6.jar  
+Patches: revanced-patches-2.157.1.jar  
 
 YouTube
 ==
-- fix: double tap rewind does not work when swipe brightness is off https://github.com/inotia00/ReVanced_Extended/issues/133
-- fix: match icon style with native icon https://github.com/inotia00/revanced-patches/pull/5
-- fix: some fingerprints are broken
-- refactor(youtube/return-youtube-dislike): change mirror API
-- crowdin translation update
-`Azerbaijani`, `Belarusian`, `Bengali`, `French`, `German`, `Greek`, `Hindi`, `Hungarian`, `Italian`, `Japanese`, `Polish`, `Portuguese, Brazilian`, `Russian`, `Turkish`, `Ukrainian`
+- add `force-vp9-codec` patch (Experimental Flag) https://github.com/inotia00/ReVanced_Extended/issues/173
+- fix: `hide suggestions` setting does not work in search results (a/b test)
+- fix: `hide button container` setting does not work as intended in certain circumstances https://github.com/inotia00/ReVanced_Extended/issues/183
+- fix: unable to play YouTube on PlayStore (root environment)
+- remove some unused language resources
 
-YouTube Music
-==
 - crowdin translation update
-`Bengali`
+`Arabic`, `Chinese Simplified`, `French`, `Greek`, `Indonesian`, `Japanese`, `Korean`, `Russian`, `Spanish`
 
 ETC
 ==
-- last update
+- add support YouTube v18.03.36, v18.04.35
+- reflect changes in the official repo
 
-※ Compatible ReVanced Manager: v0.0.51 / v0.0.52
+※ Compatible ReVanced Manager: v0.0.53
 ※ If you want to contribute to the translation, refer bellow
 
 [Crowdin translation]
