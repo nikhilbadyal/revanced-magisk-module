@@ -1,6 +1,6 @@
 CLI: revanced-cli-2.20.3-all.jar  
 Integrations: revanced-integrations-0.97.6.apk  
-Patches: revanced-patches-2.162.6.jar  
+Patches: revanced-patches-2.162.7.jar  
 
 YouTube
 ==
@@ -41,11 +41,11 @@ Notice
 - [other countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube: 18.06.39  
-YouTube-Blue: 18.06.39  
 YouTube-Revancify: 18.06.39  
+YouTube-Blue: 18.06.39  
 YouTube-Red: 18.06.39  
-Music (arm-v7a): 5.44.53  
+YouTube: 18.06.39  
 Music (arm64-v8a): 5.44.53  
+Music (arm-v7a): 5.44.53  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
