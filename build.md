@@ -23,10 +23,10 @@ YouTube
   
 **App Versions:**  
 YouTube: 18.06.41  
-YouTube-Blue: 18.06.41  
 YouTube-Red: 18.06.41  
+Music (arm64-v8a): 5.45.52  
+YouTube-Blue: 18.06.41  
 YouTube-Revancify: 18.06.41  
 Music (arm-v7a): 5.45.52  
-Music (arm64-v8a): 5.45.52  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
