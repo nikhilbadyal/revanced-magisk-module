@@ -1,22 +1,20 @@
 CLI: revanced-cli-2.20.3-all.jar  
-Integrations: revanced-integrations-0.99.5.apk  
-Patches: revanced-patches-2.164.5.jar  
+Integrations: revanced-integrations-0.99.9.apk  
+Patches: revanced-patches-2.164.9.jar  
 
 YouTube
 ==
-- fix: `Hide mix playlists` doesn't apply to search results
-- fix: `Hide community posts` does not work https://github.com/inotia00/ReVanced_Extended/issues/332
-- fix: reboot dialog is missing in `hide-floating-microphone-button` https://github.com/inotia00/ReVanced_Extended/issues/335
-- refactor: split `Hide community posts` into `Hide community posts in home feed` and `Hide community posts in subscriptions feed`
-- update ad filter
+- refactor(litho): minor optimization
+- fix incorrect switch description
 
 - crowdin translation update
-`French`, `Japanese`, `Korean`, `Portuguese (Brazilian)`, `Russian`, `Spanish`, `Turkish`, `Vietnamese`
+`Chinese Simplified`, `French`
 
 
-ETC
+YouTube Music
 ==
-- add suport YouTube v18.07.35
+- crowdin translation update
+`Spanish`
 
 ※ Compatible ReVanced Manager: v0.0.56
 ※ If you want to contribute to the translation, refer below
@@ -26,11 +24,11 @@ ETC
 - [Other Countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube-Revancify: 18.07.35  
-YouTube-Blue: 18.07.35  
-YouTube: 18.07.35  
+YouTube: 18.08.34  
+YouTube-Blue: 18.08.34  
+YouTube-Red: 18.08.34  
 Music (arm64-v8a): 5.45.52  
-YouTube-Red: 18.07.35  
+YouTube-Revancify: 18.08.34  
 Music (arm-v7a): 5.45.52  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
