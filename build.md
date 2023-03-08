@@ -34,9 +34,8 @@ ETC
 - [Other Countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube-MMT: 18.08.39  
 YouTube: 18.08.39  
-Music (arm64-v8a): 5.46.52  
-Music (arm-v7a): 5.46.52  
+YouTube-MMT: 18.08.39  
+Music (arm64-v8a): 5.47.51  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
