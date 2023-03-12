@@ -1,15 +1,19 @@
 # Config
 
-Adding a new app is as easy as this:
+Three APK download websites are supported and adding a new app is as easy as this:
 ```toml
 [Some-App]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
 ```
-
 or:
 ```toml
 [Some-App]
 uptodown-dlurl = "https://app.en.uptodown.com/android"
+```
+or:
+```toml
+[Some-App]
+apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 ```
 
 ## If you'd like to get to know more about other options:
@@ -45,4 +49,4 @@ arch = "arm64-v8a" # 'arm64-v8a', 'arm-v7a' or 'all'. default: all
 ```
 
 # Building ReVanced Extended
-Use [`config-rv-ex.toml`](./config-rv-ex.toml) as the config by replacing config.toml with it
+Use [`config-rv-ex.toml`](./config-rv-ex.toml) as the config. Or you can run build.sh as: `./build.sh config-rv-ex.toml`
