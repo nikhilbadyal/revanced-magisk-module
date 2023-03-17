@@ -1,15 +1,27 @@
 CLI: revanced-cli-2.21.0-all.jar  
-Integrations: revanced-integrations-0.100.1.apk  
-Patches: revanced-patches-2.165.1.jar  
+Integrations: revanced-integrations-0.100.2.apk  
+Patches: revanced-patches-2.166.1.jar  
 
 YouTube
 ==
-- fix: issues with protobuf https://github.com/inotia00/ReVanced_Extended/issues/480 https://github.com/inotia00/ReVanced_Extended/issues/484
-- refactor(protobuf-spoof): integrated into settings
-- refactor(protobuf-spoof): set to off by default
-- feat(general-ads): hide new type of ad
+- add `hide-autoplay-preview` patch
+- add `Show fullscreen title` settings
+- fix(return-youtube-dislike): fix right to left text layout
+- refactor(hide-autoplay-button): no longer hide [autoplay preview](https://www.reddit.com/r/revancedextended/comments/11q8rng/any_idea_how_to_hide_this_banner_in_full_screen/)
+- refactor(protobuf-spoof): move to `Experimental Flags`
 - crowdin translation update
-`Arabic`, `French`, `Greek`, `Indonesian`, `Korean`, `Spanish`, `Ukrainian`, `Vietnamese`
+`Chinese Traditional`, `French`, `Greek`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Ukrainian`, `Vietnamese`
+
+
+YouTube Music
+==
+- crowdin translation update
+`Chinese Traditional`
+
+
+ETC
+==
+- add suport YouTube v18.10.36
 
 
 ※ Compatible ReVanced Manager: v0.0.57
@@ -20,11 +32,11 @@ YouTube
 - [Other Countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube: 18.09.39  
-YouTube-Blue: 18.09.39  
-YouTube-Red: 18.09.39  
-YouTube-MMT: 18.09.39  
-YouTube-Revancify: 18.09.39  
+YouTube-Blue: 18.10.36  
+YouTube: 18.10.36  
+YouTube-Red: 18.10.36  
+YouTube-MMT: 18.10.36  
+YouTube-Revancify: 18.10.36  
 Music (arm64-v8a): 5.48.52  
 Music (arm-v7a): 5.48.52  
 
