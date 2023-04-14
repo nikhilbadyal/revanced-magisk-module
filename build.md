@@ -29,7 +29,12 @@ ETC
 - [Other Countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-Music (arm-v7a): 5.52.51  
+YouTube-Blue: 18.14.40  
+YouTube: 18.14.40  
+YouTube-Red: 18.14.40  
+YouTube-Revancify: 18.14.40  
+YouTube-MMT: 18.14.40  
 Music (arm64-v8a): 5.52.51  
+Music (arm-v7a): 5.52.51  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
