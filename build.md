@@ -1,5 +1,5 @@
 CLI: revanced-cli-2.21.0-all.jar  
-Integrations: revanced-integrations-0.101.38.apk  
+Integrations: revanced-integrations-0.102.0.apk  
 Patches: revanced-patches-2.168.38.jar  
 
 YouTube
@@ -37,8 +37,8 @@ ETC
 - [Other Countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube: 18.14.41  
 YouTube-Blue: 18.14.41  
+YouTube: 18.14.41  
 YouTube-Red: 18.14.41  
 YouTube-Revancify: 18.14.41  
 YouTube-MMT: 18.14.41  
