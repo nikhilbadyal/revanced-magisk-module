@@ -41,6 +41,11 @@ ETC
 - [Other Countries](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
+YouTube-Blue: 18.16.39  
+YouTube-Red: 18.16.39  
+YouTube: 18.16.39  
+YouTube-Revancify: 18.16.39  
+YouTube-MMT: 18.16.39  
 Music (arm64-v8a): 5.54.52  
 Music (arm-v7a): 5.54.52  
 
