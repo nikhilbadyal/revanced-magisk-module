@@ -1,52 +1,50 @@
-CLI: revanced-cli-2.21.0-all.jar  
-Integrations: revanced-integrations-0.105.4.apk  
-Patches: revanced-patches-2.171.4.jar  
+CLI: revanced-cli-2.21.1-all.jar  
+Integrations: revanced-integrations-0.107.2.apk  
+Patches: revanced-patches-2.173.2.jar  
 
 YouTube
 ==
-- add `hide-get-premium` patch https://github.com/revanced/revanced-patches/issues/1984
-- add `custom-branding-icon-manual` patch [more information](https://github.com/inotia00/revanced-documentation/wiki/Options-Information-about-the-patch#if-you-want-a-custom-icon-only-available-on-cli)
-- add `custom-double-tap-length` patch
-- feat(client-spoof): removed from patch list and dependent on `microg-support` patch
-- feat(hide-general-ads): add `Hide audio track button` settings https://github.com/revanced/revanced-patches/issues/1984
-- feat(hide-cast-button): no longer dependent on `microg-support` patch https://github.com/inotia00/ReVanced_Extended/issues/866
-- feat(protobuf-spoof): update strings resources
-- feat(spoof-app-version): rename patch (`enable-old-layout` → `spoof-app-version`)
-- feat(spoof-app-version): user selectable version to spoof
-- fix(overlay-buttons): repeat button in playlist cannot changed https://github.com/inotia00/ReVanced_Extended/issues/836
-- fix(custom-video-speed): crash due to invalid key https://github.com/inotia00/ReVanced_Extended/issues/911
-- refactor(patch-options): remove `OverlayButtonsIcon`, `clientSpoofVersion` options
-(You should remove `options.toml` file, or simply reinstall the builder)
-- crowdin translation update
-`Arabic`, `Bulgarian`, `Chinese Traditional`, `Finnish`, `French`, `Greek`, `Hungarian`, `Indonesian`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Spanish`, `Turkish`, `Ukrainian`, `Vietnamese`
+- chore: update gradle and dependencies
+- feat(youtube): add `disable-hdr-video` patch https://github.com/inotia00/ReVanced_Extended/issues/734
+- feat(youtube): custom branding icons can be set (CLI only) https://github.com/inotia00/ReVanced_Extended/issues/955
+- feat(youtube): remove dummy code
+- feat(youtube/custom-seekbar-color): change the color of the last watched progress bar https://github.com/inotia00/ReVanced_Extended/issues/748
+(in feed: changeable via settings. in history / playlists: changeable via options.json)
+- feat(youtube/hide-general-ads): hide ticket shelf in related videos https://github.com/inotia00/ReVanced_Extended/issues/946
+- feat(youtube/hide-navigation-buttons): add `Hide library button` settings https://github.com/inotia00/ReVanced_Extended/issues/842
+- feat(youtube/settings): re-add to patch list
+- feat(youtube/translations): update translation
+`Arabic`, `Bulgarian`, `Chinese Traditional`, `French`, `Greek`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Spanish`, `Turkish`, `Vietnamese`
 
 
 YouTube Music
 ==
-- add `custom-branding-music-manual` patch [more information](https://github.com/inotia00/revanced-documentation/wiki/Options-Information-about-the-patch#if-you-want-a-custom-icon-only-available-on-cli)
-- crowdin translation update
-`Chinese Traditional`, `Greek`, `Korean`, `Polish`, `Spanish`, `Turkish`, `Vietnamese`
+- feat(music): custom branding icons can be set (CLI only) https://github.com/inotia00/ReVanced_Extended/issues/955
+- feat(music/settings): re-add to patch list
+- feat(music/music-translations): update translation
+`French`, `Vietnamese`
 
 
-ETC
+MicroG
 ==
-- add support YouTube v18.16.39
+- feat(microg): add `custom-branding-microg-name` patch
+- feat(microg): add `custom-branding-microg-revancify-blue` patch
+- feat(microg): add `custom-branding-microg-revancify-red` patch
+- feat(microg): add `hide-icon-from-launcher` patch https://github.com/inotia00/ReVanced_Extended/issues/923
 
 
 ※ Compatible ReVanced Manager: v0.0.57
-※ If you want to contribute to the translation, refer below
-
-[Crowdin translation]
-- [European Countries](https://crowdin.com/project/revancedextendedeu)
-- [Other Countries](https://crowdin.com/project/revancedextended)
+※ [Crowdin/European](https://crowdin.com/project/revancedextendedeu)
+※ [Crowdin/Non-European](https://crowdin.com/project/revancedextended)
   
 **App Versions:**  
-YouTube-Blue: 18.16.39  
 YouTube-Red: 18.16.39  
 YouTube: 18.16.39  
-YouTube-Revancify: 18.16.39  
+YouTube-Blue: 18.16.39  
+YouTube-Revancify-Red: 18.16.39  
+YouTube-Revancify-Blue: 18.16.39  
 YouTube-MMT: 18.16.39  
-Music (arm64-v8a): 5.54.52  
-Music (arm-v7a): 5.54.52  
+Music (arm64-v8a): 5.55.53  
+Music (arm-v7a): 5.55.53  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
