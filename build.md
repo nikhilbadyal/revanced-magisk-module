@@ -1,9 +1,9 @@
-YouTube-Revancify-Red: 18.25.40  
 YouTube: 18.25.40  
+YouTube-Revancify-Red: 18.25.40  
 YouTube-Revancify-Blue: 18.25.40  
 YouTube-MMT: 18.25.40  
-Music-arm64: 6.08.50  
-Music-arm: 6.08.50  
+Music-arm64: 6.10.51  
+Music-arm: 6.10.51  
 
 Install [MMicrog](https://github.com/inotia00/mMicroG/releases) for non-root YouTube or YT Music  
 
