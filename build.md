@@ -1,7 +1,7 @@
-YouTube: 18.27.35  
 YouTube-Revancify-Red: 18.27.35  
-YouTube-MMT: 18.27.35  
+YouTube: 18.27.35  
 YouTube-Revancify-Blue: 18.27.35  
+YouTube-MMT: 18.27.35  
 Music-arm64: 6.11.52  
 
 Install [MMicrog](https://github.com/inotia00/mMicroG/releases) for non-root YouTube or YT Music  
@@ -11,61 +11,37 @@ Install [MMicrog](https://github.com/inotia00/mMicroG/releases) for non-root You
 ---
 Changelog:  
 CLI: inotia00/revanced-cli-2.22.2-all.jar  
-Integrations: inotia00/revanced-integrations-0.114.1.apk  
-Patches: inotia00/revanced-patches-2.186.1.jar  
+Integrations: inotia00/revanced-integrations-0.114.4.apk  
+Patches: inotia00/revanced-patches-2.186.4.jar  
 
 YouTube
 ==
-- feat(youtube): add support version `v18.27.35`
-- feat(youtube): add `hide-suggested-video-overlay` patch https://github.com/inotia00/ReVanced_Extended/issues/1197
-- feat(youtube): change `video-speed` to `playback-speed` https://github.com/inotia00/revanced-patches/pull/13
-- feat(youtube): generate an exception when an invalid options is entered
-- feat(youtube/custom-seekbar-color): apply custom seekbar color to shorts https://github.com/inotia00/ReVanced_Extended/issues/1104
-- feat(youtube/hide-general-ads): hide new type of ads
-- feat(youtube/hide-layout-components): change the default value of `Hide expandable chip under video` https://github.com/inotia00/ReVanced_Extended/issues/1135
-- feat(youtube/hide-shorts-components): shorts header is not blocked on some shorts shelves [ScreenShot](https://imgur.com/a/Z81TCYm)
-- fix(youtube/custom-branding-youtube-name): takes too long to apply the patch in the RVX Manager
-- fix(youtube/overlay-buttons): `Disable playlist autoplay` loops video in minimized and PiP mode https://github.com/inotia00/ReVanced_Extended/issues/1092
-- fix(youtube/return-youtube-dislike): dislikes not showing in some situations https://github.com/inotia00/ReVanced_Extended/issues/1167
-- fix(youtube/sponsorblock): some segments skipping slightly too late https://github.com/inotia00/ReVanced_Extended/issues/1144 https://github.com/inotia00/ReVanced_Extended/issues/1152
+- feat(youtube/hide-suggested-video-overlay): no longer dependent on `overlay-buttons` patches https://github.com/inotia00/ReVanced_Extended/issues/1210
+- fix(youtube): remove dummy code
+- fix(youtube): some fingerprints are located in the wrong path
+- fix(youtube/enable-old-quality-layout): do not use low level filter anymore
+- fix(youtube/hide-shorts-components): sometimes shorts shelves are not hidden
+- fix(youtube/hide-suggested-actions): not hidden normally in some situations
+- fix(youtube/overlay-buttons): remove unnecessary dependencies
+- fix(youtube/swipe-controls): When `Press-to-swipe` is disabled, `Press-to-swipe haptic feedback` should also be disabled https://github.com/inotia00/ReVanced_Extended/issues/811
 - feat(youtube/translations): update translation
-`Arabic`, `Bengali`, `Bulgarian`, `Chinese Simplified`, `Chinese Traditional`, `French`, `German`, `Greek`, `Indonesian`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Spanish`, `Turkish`, `Ukrainian`, `Vietnamese`
+`Chinese Traditional`, `French`, `German`, `Italian`, `Korean`, `Russian`, `Turkish`
 
 
 Music
 ==
-- feat(music): remove `enable-dismiss-queue` patch (already applied to all users) [reference - 9to5Google](https://9to5google.com/2023/07/13/youtube-music-dismiss-queue/)
-- feat(music): generate an exception when an invalid value is entered
-- feat(music/microg-support): renamed patch name https://github.com/inotia00/ReVanced_Extended/issues/1141
-- fix(music/custom-branding-music-name): no more error occurs when the patch is applied via RVX Manager
 - feat(music/translations): update translation
-`Bengali`, `Chinese Simplified`, `French`, `Indonesian`, `Korean`, `Turkish`, `Vietnamese`
+`Vietnamese`
 
 
 MicroG
 ==
-- feat(microg): add `custom-branding-icon-mmt` patch https://github.com/inotia00/revanced-patches/pull/12
-- feat(microg): add `materialyou` patch https://github.com/inotia00/revanced-patches/pull/12
+- feat(microg): temporary suspension of support for all patches https://github.com/inotia00/ReVanced_Extended/issues/1207
 
 
 Reddit
 ==
-- feat(reddit/hide-navigation-buttons): add `Hide chat button` settings
-- feat(reddit/hide-navigation-buttons): change settings name `Hide discover button` > `Hide discover / community button`
-- feat(reddit/hide-navigation-buttons): `hide-create-button`, `hide-discover-button` patches are integrated
-- feat(reddit/hide-navigation-buttons): supports the latest version
-- fix(reddit/open-links-externally): exceptions occur in some manufacturers ROM
-- fix(reddit/reddit-settings): now when the patch is applied through the RVX Manager, the settings are added normally
-
-
-Etc
-==
-- build: bump dependencies
-- build: update gradle
-- build(dependencies): move to official Google smali fork
-- build(dependencies): move to maven central apktool fork
-- build(dependencies): move to maven central revanced-patcher fork
-- no longer compatible with the official ReVanced Manager
+- feat(reddit): add `hide-place-button` patch
 
 
 ※ Compatible ReVanced Manager: [RVX Manager v1.4.3 (fork)](https://github.com/inotia00/revanced-manager/releases/tag/v1.4.3)
