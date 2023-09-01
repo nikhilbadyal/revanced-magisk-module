@@ -1,7 +1,8 @@
 YouTube-Revancify-Red: 18.34.37  
 YouTube: 18.34.37  
-YouTube-Revancify-Blue: 18.34.37  
 YouTube-MMT: 18.34.37  
+YouTube-Revancify-Blue: 18.34.37  
+YTMusic: 6.17.52  
 
 Install [MMicrog](https://github.com/inotia00/mMicroG/releases) for non-root YouTube or YT Music  
 
