@@ -1,31 +1,36 @@
-YouTube: 18.33.37  
-YouTube-Revancify-Red: 18.33.37  
-YouTube-Revancify-Blue: 18.33.37  
-YouTube-MMT: 18.33.37  
+YouTube-Revancify-Red: 18.34.37  
+YouTube: 18.34.37  
+YouTube-Revancify-Blue: 18.34.37  
+YouTube-MMT: 18.34.37  
 
 Install [MMicrog](https://github.com/inotia00/mMicroG/releases) for non-root YouTube or YT Music  
 
 [revanced-magisk-module](https://github.com/nikhilbadyal/revanced-magisk-module)  
+
 ---
 Changelog:  
-CLI: inotia00/revanced-cli-2.22.2-all.jar  
-Integrations: YT-Advanced/revanced-integrations-0.117.2.apk  
-Patches: YT-Advanced/revanced-patches-2.189.0.jar  
+CLI: ReVanced/revanced-cli-3.1.0-all.jar  
+Integrations: YT-Advanced/revanced-integrations-0.118.0.apk  
+Patches: YT-Advanced/revanced-patches-2.190.0.jar  
 
-#### [2.189.0](https://github.com/YT-Advanced/ReX-patches/compare/v2.188.2...v2.189.0) (2023-08-25)
+### [2.190.0](https://github.com/YT-Advanced/ReX-patches/compare/v2.189.0...v2.190.0) (2023-09-01)
 
 
 ### Bug Fixes
 
-* **youtube/hide-quick-action:** Not worked correctly https://github.com/YT-Advanced/YT-Advanced/issues/68
+* **hide-filmstip-overlay:** The filmstrip preview didn't showed https://github.com/YT-Advanced/YT-Advanced/issues/99
+* **language-switch:** Not shown in `v18.33.xx` https://github.com/YT-Advanced/YT-Advanced/issues/98
+* **youtube/hide-emoji-picker:** Not get hidden on comment section https://github.com/YT-Advanced/YT-Advanced/issues/104
 
-* **youtube/hide-emoji-picker:** Not worked correctly
 
-* **youtube-music/hide-upgrade-button:** Not worked without Sample button
+### Features
 
-### Feature
+* Add support for `v18.34.37`
 
-* **youtube:** Added support for `v18.33.xx`
+* **higher-seekbar-height:** This patch will increase the seekbar height, which is helpful for user who have a big screen ([3c9fe28](https://github.com/YT-Advanced/ReX-patches/commit/3c9fe28075eead38d65bb2bfbba5b4456d0d9c2c))
 
-* **youtube-music:** Added support for `v6.16.52`
+* **youtube/layout:** Hide quality layout footer https://github.com/YT-Advanced/ReX-patches/issues/20
+
+
+
 ---  
