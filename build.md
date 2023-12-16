@@ -1,4 +1,5 @@
 YouTube: 18.45.43  
+YTMusic: 6.31.55  
 
 Install [MicroG-RE](https://github.com/WSTxda/MicroG-RE/releases/latest) for non-root YouTube and YT Music  
 Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) module to detach YouTube and YT Music from Play Store  
