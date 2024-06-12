@@ -1,5 +1,3 @@
-#### ⚠️ Do not download modules from 3rd party sources like random websites you found on Google. There are many that uses my modules and impersonates ReVanced.
-
 # ReVanced Magisk Module
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/rvc_magisk)
 [![CI](https://github.com/nikhilbadyal/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/nikhilbadyal/revanced-magisk-module/actions/workflows/ci.yml)
@@ -29,10 +27,9 @@ Note that the <a href="../../actions/workflows/ci.yml">CI workflow</a> is schedu
 </details>
 
 ## To include/exclude patches or patch other apps
-[**See the list of patches**](https://j-hc.github.io/rvmm-config-gen/)
 
  * Star the repo :eyes:
- * [Fork the repo](https://github.com/nikhilbadyal/revanced-magisk-module/fork) or use it as a template
+ * Use the repo as a [template](https://github.com/new?template_name=revanced-magisk-module&template_owner=j-hc)
  * Customize [`config.toml`](./config.toml) using [rvmm-config-gen](https://j-hc.github.io/rvmm-config-gen/)
  * Run the build [workflow](../../actions/workflows/build.yml)
  * Grab your modules and APKs from [releases](../../releases)
