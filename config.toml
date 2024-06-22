@@ -22,7 +22,7 @@ module-prop-name = "ytrv-magisk"
 [YTMusic]
 build-mode = "module"
 app-name = "Music"
-excluded-patches = "'Custom branding icon for YouTube Music' 'Custom branding for Music name' 'Enable debug logging'"
+excluded-patches = "'Custom branding icon for YouTube Music' 'CC' 'Enable debug logging'"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
 module-prop-name = "ytmusicrvx-magisk"
 arch = "arm64-v8a"
